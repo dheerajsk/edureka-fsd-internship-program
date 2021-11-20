@@ -1,0 +1,56 @@
+<html>
+
+<body>
+    <form action="" name="formSignup" autocomplete="on">
+        <label>Your Name *</label>
+        <input type="text" name="txtName" value="Dheeraj" required>
+        <br /><br />
+        <label>Your Email</label>
+        <input type="email" name="txtEmail" id="txtEmail" readonly>
+        <br /><br />
+        <label for="txtPassword">Password *</label>
+        <input type="password" name="txtPassword" required>
+        <br /><br />
+        <label>Your age</label>
+        <input type="number" name="txtAge" id="txtAge">
+        <br /><br />
+        <label>Your Date of Birth</label>
+        <input type="date" name="txtDateOfBirth">
+        <br /><br />
+        <label for="ddlCountry">Country</label>
+        <select name="Countries" multiple="true">
+            <option value="1">India</option>
+            <option value="2">US</option>
+            <option value="3">UK</option>
+            <option value="4">Australia</option>
+        </select>
+
+        <br /><br />
+        <label>Your Gender</label>
+        <br />
+        <label for="radioMale">Male</label>
+        <input type="radio" name="radioGender" id="radioMale" checked="true">
+        <label>Female</label>
+        <input type="radio" name="radioGender" id="radioFemale">
+        <label>Don't want to mention</label>
+        <input type="radio" name="radioGender" id="radioDont">
+
+        <br /><br />
+        <label>Phone</label>
+        <input type="tel" name="telPhone" value="9999999999">
+
+        <br /><br />
+        <input type="checkbox" name="chkTerms" checked="true">
+        <label>Terms & Conditions</label>
+
+        <br /><br />
+        <label for="txtNotes">Notes</label>
+        <textarea name="txtNotes"></textarea>
+
+        <br />
+        <br />
+        <input type="submit" value="Save" />
+    </form>
+</body>
+
+</html>
