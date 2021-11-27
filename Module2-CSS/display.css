@@ -1,0 +1,20 @@
+
+.backg{
+    background-color: brown;
+}
+
+.display-div{
+    display: flex;
+    /* visibility: hidden; */
+    /* display: none; */
+}
+
+.display-span{
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+}
+
+/* Types of display */
+/* Inline */
+/* Block */

@@ -15,7 +15,15 @@
 
 .bg-color{
     background-color: #FA4E23;
-    color: white;
+    color: black;
+}
+
+.content-panel{
+    background-color: coral;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    margin: 20px;
 }
 
 /* Background, height, width */
@@ -30,8 +38,8 @@
 .spanPage{
     border-color: #8c96ab;
     border-width: 1px;
-    border-style: solid;
-    border-radius: 7px;
+    border-style: dashed;
+    border-radius: 70px;
     margin: 10px 10px 10px 10px;
     padding: 4px 9px 4px 9px;
 }
