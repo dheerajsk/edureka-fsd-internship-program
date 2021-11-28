@@ -7,9 +7,18 @@
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
+
+@media only screen and (max-width:500px){
+    .food-menu-container{
+        margin: 10px;
+        min-width: 350px;
+    }
+}
+
 .food-menu-left{
     width: 30%;
     padding: 22px;
+    vertical-align: top;
 }
 
 .food-menu-right{
@@ -22,6 +31,13 @@
     font-family: monospace;
     font-size: 30px;
     font-weight: 600;
+}
+
+@media only screen and (max-width:500px){
+    .food-header{
+        font-size: 42px;
+        color: red;
+    }
 }
 
 .address-line-1{
