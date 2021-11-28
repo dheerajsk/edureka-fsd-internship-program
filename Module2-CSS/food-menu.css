@@ -1,0 +1,65 @@
+
+.food-menu-container{
+    margin: 50px;
+    padding: 25px 35px 25px 35px;
+    min-height: 300px;
+    min-width: 600px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.food-menu-left{
+    width: 30%;
+    padding: 22px;
+}
+
+.food-menu-right{
+    padding: 16px;
+}
+
+.food-header{
+    color: #192f60;
+    margin: 9px;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.address-line-1{
+    color: #192f60;
+    margin: 9px;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.address-line-2{
+    margin: 9px;
+    color: #636f88;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.food-menu-top{
+    border-bottom: 1px solid #dedfe5;
+}
+
+.prices{
+    font-family: monospace;
+    color: #636f88;
+    font-size: 16px;
+}
+
+.td-price{
+    font-size: 16px;
+    font-family: monospace;
+    padding: 24px;
+    padding-left: 82px;
+    color: #192f60;
+}
+
+img{
+    width: 140px;
+    height: 130px;
+    border-radius: 20px;
+}
