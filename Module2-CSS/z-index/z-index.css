@@ -1,0 +1,17 @@
+
+/* tag selector */
+.img1{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.img2{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/* class selector */
