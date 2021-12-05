@@ -11,3 +11,7 @@
 .btn-primary{
     float: right;
 }
+
+.input-group-text{
+    height: 100%;
+}
