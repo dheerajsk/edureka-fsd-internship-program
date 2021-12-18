@@ -72,6 +72,12 @@
     font-weight: 600;
 }
 
+@media only screen and (max-width:500px){
+    .filter-bar{
+        height: 180px;
+    }
+}
+
 .location{
     color: #192f60;
     font-size: 12px;

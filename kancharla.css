@@ -1,0 +1,193 @@
+*{
+    font-family: 'Poppins', sans-serif;
+} 
+
+
+.food-menu-left{
+    width: 30%;
+    padding: 22px;
+    vertical-align: top;
+}
+
+.food-menu-right{
+    padding: 16px;
+}
+
+.food-header{
+    color: #192f60;
+    margin: 9px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.col{
+    border: 1px solid #fff;;
+    height: 800px;
+    margin: 25px;
+    margin-left: 100px;
+    padding: 12px;
+}
+
+.bf-header{
+    margin-left:100px;
+    margin-top: 40px;
+    color: #192f60 !important;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+
+
+
+
+.address-line-1{
+    color: #192f60;
+    margin: 9px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.address-line-2{
+    margin: 9px;
+    color: #636f88;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.food-menu-top{
+    border-bottom: 1px solid #dedfe5;
+}
+
+.prices{
+    color: #636f88;
+    font-size: 16px;
+}
+
+ .td-price{
+    font-size: 16px;
+    padding: 24px;
+    padding-left: 82px;
+    color: #192f60;
+} 
+
+img{
+    width: 140px;
+    height: 130px;
+    border-radius: 20px;
+}
+
+
+
+p{
+    margin-bottom: 0 !important;
+}
+
+
+.margin{
+    margin-top: 1rem !important;
+    
+}
+
+
+ .form-check{
+    margin-left: 2rem;
+    margin-top: 0.75rem;
+} 
+.navbar-brand{
+    width: 60px;
+    background-color: white !important;
+    color: #eb2929 !important;
+    text-align: center;
+    font-weight: 600;
+    font-size: 33px;
+    border-radius: 29px;
+}
+
+.btn-outline-success{
+    color: white !important;
+    border: 1px solid white !important;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: transparent !important;
+    border-color: white !important;
+}
+
+.btn-link{
+    color: white;
+    text-decoration: none;
+}
+
+.rounded{
+    border-radius: 23px !important;
+}
+
+.bg-light{
+    background-color: #ce0505 !important;
+}
+
+.card-col{
+    height: 300px;
+    padding: 25px 35px;
+}
+
+.shadow{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    padding: 12px;
+}
+
+.card{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    margin-bottom: 18px;
+    height: 300px;
+}
+
+.h2{
+    color: #192f60 !important;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.location{
+    color: #192f60;
+    font-size: 12px;
+}
+
+
+
+
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    top: 350px;
+    text-decoration: none;
+}
+
+
+
+
+
+@media only screen and (min-width:300px){
+    
+    .card{
+        height: 300px;
+        width: 800px;
+    }
+    .rs{
+        width: 800px;
+    }
+
+    
+
+}
+
+ @media only screen and (min-width:1200px){
+    .card{
+        height: 320px;
+        width: 800px;
+    }
+    .rs{
+        width: 320px;
+    }
+}  
