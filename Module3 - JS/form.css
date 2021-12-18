@@ -1,0 +1,17 @@
+
+.container{
+    margin: 3%;
+    padding: 6%;
+}
+
+.col-md-5{
+    margin: auto !important;
+}
+
+.btn-primary{
+    float: right;
+}
+
+.input-group-text{
+    height: 100%;
+}
