@@ -6,7 +6,12 @@
 
 export class MessageSender{
 
-    sendMessage(message){
+    send(message){
+        // get phone number
+        // make socket message to reciver
+        // check availaibility of connection
+        // push message to a pool
+        // wait for response.
         console.log("Message sent");
     }
 }
