@@ -13,8 +13,8 @@ DOM Interaction
 1. Get an element and its value - Done
 - Get values from all elements on form and print in console.
 2. Set value to an element
-- Set values on a label
+- Set values on a label - done
 3. To handle any events(click of button, entering text into a textbox)
 - on click of button. - Done
 4. To style an element
-- style textbox
+- style textbox - done

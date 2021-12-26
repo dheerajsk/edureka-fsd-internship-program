@@ -15,6 +15,7 @@
         <div class="row">
             <!-- col is bootstrap class -->
             <div class="col col-md-5">
+                <label id="lblResult" style="display: none;">Form Submitted!!</label>
                 <img width="250px"
                     src="https://www.ambiance-sticker.com/images/Image/sticker-logo-apple-2-ambiance-sticker-ros-apple.jpg"
                     alt="Logo">
@@ -22,10 +23,11 @@
             <div class="col col-md-5">
                 <!-- h2 is a bootstrap class -->
                 <h2 class="h2">SignUp Form</h2>
+                <label id="fnameResult"></label>
                 <form action="">
                     <div class="mb-3">
                         <label class="form-label" for="fname">First Name</label>
-                        <input id="txtbFname" class="form-control" type="text">
+                        <input oninput="handleNameInput()" id="txtbFname" class="form-control" type="text">
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="lname">Last Name</label>
@@ -61,7 +63,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input onclick="handleSubmit()" class="btn btn-primary" type="submit" value="Submit">
+                            <input onclick="handleSubmit()" class="btn btn-primary" type="button" value="Submit">
                         </div>
                 </form>
             </div>

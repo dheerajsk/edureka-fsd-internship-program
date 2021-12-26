@@ -37,4 +37,17 @@ function handleSubmit(){
     console.log(isMale);
     console.log(isFemale);
     
+    const lblResult = document.getElementById("lblResult");
+    const result = `Name = ${fname} ${lname}, 
+    Email: ${email}, Gender = ${isMale== true ? 'Male' : 'Female'}`;
+    console.log(result);
+    lblResult.style.display="inline";
+    lblResult.innerText = result;
+    lblResult.style.backgroundColor='yellow';
+}
+
+function handleNameInput(){
+    const fnameResult = document.getElementById("fnameResult");
+    const nameinput = document.getElementById("txtbFname");
+    fnameResult.innerText = nameinput.value;
 }
