@@ -1,0 +1,20 @@
+DOM Manipulation
+
+DOM
+1. Document Object Model
+2. Collection of all eleemnts in html page.
+3. Tree like structure to maintain all html elements
+4. On any event, dom is updated(Performance)-> (React(Virtual DOM)
+, Angular)
+
+div->row->(col1, col2)
+
+DOM Interaction
+1. Get an element and its value - Done
+- Get values from all elements on form and print in console.
+2. Set value to an element
+- Set values on a label
+3. To handle any events(click of button, entering text into a textbox)
+- on click of button. - Done
+4. To style an element
+- style textbox
