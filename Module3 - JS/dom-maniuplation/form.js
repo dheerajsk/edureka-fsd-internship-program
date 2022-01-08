@@ -18,6 +18,13 @@ function handleSubmit(){
     const txtbEmail = document.getElementById("txtbEmail");
     // 2. Get alue of element
     const email = txtbEmail.value;
+    // Validate Email
+    // 1. Check if "@" (t@t.in)
+    const indexOfAt = email.indexOf("@");
+    const valid = email.length > (indexOfAt+4);
+    if(indexOfAt<1 || !valid || !email.endsWith(".com")){
+        alert("Please enter a valid email");
+    }
     console.log(email);
 
     const txtbPassword = document.getElementById("txtbPassword");
@@ -27,7 +34,13 @@ function handleSubmit(){
 
     const inputDOB = document.getElementById("inputDOB");
     // 2. Get alue of element
-    const dob = inputDOB.value;
+    const dob = new Date(inputDOB.value);
+    const yearOfSelectedDate = dob.getFullYear(); 
+    const currentYear = new Date().getFullYear(); 
+    if(yearOfSelectedDate>(currentYear-15)){
+        alert("You should be atleast 15 years old");
+    }
+
     console.log(dob);
 
     // Get elements by name

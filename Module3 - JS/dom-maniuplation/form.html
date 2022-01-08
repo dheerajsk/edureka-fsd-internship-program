@@ -27,24 +27,26 @@
                 <form action="">
                     <div class="mb-3">
                         <label class="form-label" for="fname">First Name</label>
-                        <input oninput="handleNameInput()" id="txtbFname" class="form-control" type="text">
+                        <input oninput="handleNameInput()" id="txtbFname" class="form-control" maxlength="20"
+                            type="text" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="lname">Last Name</label>
-                        <input id="txtbLname" class="form-control" type="text">
+                        <input id="txtbLname" class="form-control" type="text" maxlength="20" required>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">@</span>
                         </div>
-                        <input id="txtbEmail" class="form-control" placeholder="Email" type="email">
+                        <input id="txtbEmail" class="form-control" placeholder="Email" type="email" required>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="bi bi-lock"></i></span>
 
                         </div>
-                        <input id="txtbPassword" class="form-control" placeholder="Password" type="password">
+                        <input id="txtbPassword" minlength="6" maxlength="12" class="form-control"
+                            placeholder="Password" type="password" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="dob">Date of Birth</label>
@@ -63,7 +65,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input onclick="handleSubmit()" class="btn btn-primary" type="button" value="Submit">
+                            <input onclick="handleSubmit()" class="btn btn-primary" type="submit" value="Submit">
                         </div>
                 </form>
             </div>
