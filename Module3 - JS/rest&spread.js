@@ -25,8 +25,23 @@ function addArray(...numbers){
     });`cc cc`
     return sum;
 }
-console.log(addArray(1,2, 3));
+// console.log(addArray(1,2, 3));
 // console.log(add(1,2, 3));
 // console.log(add(1,2, 3, 4));
 // console.log(add(1,2, 3, 4, 5));
 // console.log(add(1,2));
+
+// Spread (...) extracts array into individual values
+
+function arrayConcat(){
+    const cars = ["Audi", "Maruti", "Tata"];
+    const cars2 = ["MG", "KIA", "Tesla", "Ferrari"];
+    // const allCars = ["Audi", "Maruti", "Tata", "MG", "KIA", "Tesla", "Ferrari"]
+    // const allCars = cars.concat(cars2);
+    console.log(...cars);
+    console.log(cars);
+    const allCars = [...cars, ...cars2];
+    console.log(allCars);
+}
+
+arrayConcat();

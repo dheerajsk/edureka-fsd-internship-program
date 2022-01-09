@@ -8,6 +8,7 @@ function handleSubmit(){
     const txtbFname = document.getElementById("txtbFname");
     // 2. Get alue of element
     const fname = txtbFname.value;
+    updateStorage(fname);
     console.log(fname);
 
     const txtbLname = document.getElementById("txtbLname");
@@ -64,3 +65,19 @@ function handleNameInput(){
     const nameinput = document.getElementById("txtbFname");
     fnameResult.innerText = nameinput.value;
 }
+
+function updateStorage(firstname){
+    localStorage.setItem("fname", firstname);
+    sessionStorage.setItem("fname", firstname);
+}
+
+function updateForm(){
+    const txtbFname = document.getElementById("txtbFname");
+    txtbFname.value = sessionStorage.getItem("fname");
+}
+
+// sessionStorage (domain)
+// values are only scoped to 1 tab
+
+// localStorage (domain)
+// through out browser.
