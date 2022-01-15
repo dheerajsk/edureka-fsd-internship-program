@@ -1,21 +1,17 @@
+// 1. Import express.
+const express = require("express");
 
-// We need to create nodejs server(http)
-// HTTP (Hyper Text Transafer Protocol)
-// - Allows communication between client and server
-// - Transfer data between client and server
+// 2. Creating a server
+const server = express();
 
-// Importing HTTP Package
+// 3. Assigning port to server
+server.listen("3200");
 
-// Types of Packages/Libs
-// 1. Packages of Core Module
-// 2. Pckages from NPM
+// 4. Handle default request from client
+server.get("/", (req, res)=>{
+    res.send("Hello from Express");
+})
 
-const http = require("http");
 
-// Creating server using http protocol
-// Server should have ports
-http.createServer((req, res)=>{
-    res.end("Hello world from NodeJS");
-}).listen(3200);
 
-console.log("Server is listening on 3200");
+console.log("Express is listening on 3200");

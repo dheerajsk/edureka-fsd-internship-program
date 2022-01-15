@@ -1,0 +1,11 @@
+
+1. Add a new restaurantm - POST
+2. Filter restaurants based on location - Get
+3. Get All restaurants - Get
+4. Update a restaurant - put
+5. Delete a restaurant - Delete
+6. Get restaurant by id - Get
+
+
+POSTMAN - Tool to test apis.
+React
