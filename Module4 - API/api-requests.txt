@@ -1,5 +1,5 @@
 
-1. Add a new restaurantm - POST
+1. Add a new restaurant - POST
 2. Filter restaurants based on location - Get
 3. Get All restaurants - Get
 4. Update a restaurant - put
