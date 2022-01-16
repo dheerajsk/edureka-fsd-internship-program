@@ -1,10 +1,10 @@
 
 module.exports = class Restaurant{
-        constructor(id, name, location, website, contanct){
+        constructor(id, name, location, website, contact){
             this.id = id;
             this.name=name;
             this.location = location;
             this.website = website;
-            this.contanct = contanct;
+            this.contact = contact;
         }
 }

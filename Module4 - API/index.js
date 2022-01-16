@@ -1,9 +1,11 @@
 // 1. Import express.
 const express = require("express");
 const bodyParser = require("body-parser");
-
 // Import routes
 const restaurantRoutes = require("./restaurant/routes/api_restaurant");
+const mongodb = require("./config/mongodb");
+
+mongodb.connect();
 
 // 2. Creating a server
 const server = express();
