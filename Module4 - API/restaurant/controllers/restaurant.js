@@ -1,5 +1,5 @@
 const Restaurant = require("../models/restaurant");
-
+const repo = require("../repositories/restaurant");
 
 // Trying to add restaurant
 exports.addRestaurant = (req, res)=>{
@@ -7,5 +7,7 @@ exports.addRestaurant = (req, res)=>{
     const newRestaurant = 
     new Restaurant(null, req.body.name, 
         req.body.location, req.body.website, req.body.contact);
-    res.send("Data recieved");
+    repo.add(newRestaurant, ()=>{
+        res.send("Data added");
+    })
 }
