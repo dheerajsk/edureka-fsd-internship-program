@@ -1,0 +1,17 @@
+
+.child{
+    margin: 1%;
+    height: 250px;
+    width: 250px;
+    background-color: brown;
+}
+
+.parent{
+    height: 600px;
+    display: flex;
+    border: 1px solid royalblue;
+    /* When child is not going to take entier width */
+    /* justify-content:space-evenly; */
+    align-items: center;
+    justify-content : center;
+}
