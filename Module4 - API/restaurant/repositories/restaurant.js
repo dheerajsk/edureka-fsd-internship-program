@@ -37,3 +37,27 @@ exports.getByID = (id, callback)=>{
         }
     )
 }
+
+exports.getByLocation = (location, callback)=>{
+    const collection = mongodb.getCollection("Restaurant");
+    collection.find({location:location}).toArray().then(
+        (restaurants)=>{
+            callback(restaurants);
+        },
+        err=>{
+            console.log(err);
+        }
+    )
+}
+
+exports.updateRestaurant = (restaurant, callback)=>{
+    const collection = mongodb.getCollection("Restaurant");
+    const filter = {_id: ObjectId(restaurant.id)};
+    const update = { $set: {name: restaurant.name, location: restaurant.location, website: restaurant.website}};
+    collection.findOneAndUpdate(filter, update).then(
+        ()=>{
+            callback();
+        },
+        err=>{console.log(err);}
+    )
+}

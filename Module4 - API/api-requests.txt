@@ -1,10 +1,10 @@
 
 1. Add a new restaurant - POST - Done
-2. Get restaurants by location - Get
-3. Get All restaurants - Get  - Homework
+2. Get restaurants by location - Done
+3. Get All restaurants - Get  - Done
 4. Update a restaurant - put
 5. Delete a restaurant - Delete
-6. Get restaurant by id - Get - HomeWork
+6. Get restaurant by id - Get - Done
 
 
 POSTMAN - Tool to test apis.

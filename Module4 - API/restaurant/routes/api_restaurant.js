@@ -10,6 +10,8 @@ const router = express.Router();
 
 router.post("/", controller.addRestaurant);
 router.get("/", controller.getAllRestaurants);
+router.get("/location/:loc", controller.getRestaurantsByLocation);
 router.get("/:id", controller.getRestaurantById);
+router.put("/", controller.updateRestaurant);
 
 module.exports = router;
