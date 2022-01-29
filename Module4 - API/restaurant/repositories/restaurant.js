@@ -12,3 +12,16 @@ exports.add = (item, callback)=>{
         })
         .catch(err=>{console.log(err)});
 }
+
+exports.getAll = (callback)=>{
+    const collection = mongodb.getCollection("Restaurant");
+    collection.find().toArray().then(
+        (restaurants)=>{
+            callback(restaurants);
+        },
+        err=>{
+            console.log(err);
+        }
+    )
+
+}

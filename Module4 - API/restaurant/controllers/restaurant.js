@@ -11,3 +11,9 @@ exports.addRestaurant = (req, res)=>{
         res.send("Data added");
     })
 }
+
+exports.getAllRestaurants = (req, res)=>{
+    repo.getAll((restaurants)=>{
+        res.send(restaurants);
+    })
+}

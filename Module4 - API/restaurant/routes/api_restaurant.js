@@ -9,5 +9,6 @@ const router = express.Router();
 // Step 3: Configure route paths
 
 router.post("/", controller.addRestaurant);
+router.get("/", controller.getAllRestaurants);
 
 module.exports = router;
