@@ -1,4 +1,5 @@
 
+const { ObjectId } = require("mongodb");
 const mongodb = require("../../config/mongodb");
 
 exports.add = (item, callback)=>{
@@ -23,5 +24,16 @@ exports.getAll = (callback)=>{
             console.log(err);
         }
     )
+}
 
+exports.getByID = (id, callback)=>{
+    const collection = mongodb.getCollection("Restaurant");
+    collection.findOne({_id:ObjectId(id)}).then(
+        (restaurants)=>{
+            callback(restaurants);
+        },
+        err=>{
+            console.log(err);
+        }
+    )
 }

@@ -17,3 +17,10 @@ exports.getAllRestaurants = (req, res)=>{
         res.send(restaurants);
     })
 }
+
+exports.getRestaurantById = (req, res)=>{
+    const id = req.params.id;
+    repo.getByID(id, (resutaurant)=>{
+        res.send(resutaurant);
+    })
+}
