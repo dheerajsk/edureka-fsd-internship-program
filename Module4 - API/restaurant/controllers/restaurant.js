@@ -45,3 +45,18 @@ exports.getRestaurantsByLocation = (req, res)=>{
         res.send(resutaurant);
     })
 }
+
+exports.searchRestaurant = (req, res)=>{
+    const key = req.params.key;
+    console.log(key);
+    repo.search(key, (resutaurants)=>{
+        res.send(resutaurants);
+    })
+}
+
+exports.deleteRestaurant = (req, res)=>{
+    const id = req.params.id;
+    repo.deleteRestaurant(id, ()=>{
+        res.send("Restaurant deleted");
+    })
+}

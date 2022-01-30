@@ -13,5 +13,7 @@ router.get("/", controller.getAllRestaurants);
 router.get("/location/:loc", controller.getRestaurantsByLocation);
 router.get("/:id", controller.getRestaurantById);
 router.put("/", controller.updateRestaurant);
+router.delete("/:id", controller.deleteRestaurant);
+router.get("/search/:key", controller.searchRestaurant)
 
 module.exports = router;

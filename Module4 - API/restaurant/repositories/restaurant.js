@@ -50,6 +50,19 @@ exports.getByLocation = (location, callback)=>{
     )
 }
 
+exports.search = (key, callback)=>{
+    console.log(regexKey);
+    const collection = mongodb.getCollection("Restaurant");
+    collection.find({name: {$regex:key}}).toArray().then(
+        (restaurants)=>{
+            callback(restaurants);
+        },
+        err=>{
+            console.log(err);
+        }
+    )
+}
+
 exports.updateRestaurant = (restaurant, callback)=>{
     const collection = mongodb.getCollection("Restaurant");
     const filter = {_id: ObjectId(restaurant.id)};
@@ -60,4 +73,14 @@ exports.updateRestaurant = (restaurant, callback)=>{
         },
         err=>{console.log(err);}
     )
+}
+
+exports.deleteRestaurant = (id, callback)=>{
+    const collection = mongodb.getCollection("Restaurant");
+    collection.findOneAndDelete({_id: ObjectId(id)})
+        .then(
+            ()=>{callback()},
+            err=>{console.log(err)}
+        )
+    
 }
