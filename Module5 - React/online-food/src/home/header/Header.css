@@ -1,0 +1,22 @@
+.header{
+    margin: 0 5px;
+    height: 240px;
+    border: 1px solid lightblue;
+    background-size: cover;
+    background-image: url("https://www.skinstoryclinic.com/wp-content/uploads/image-2.jpeg");
+}
+
+.header-form{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.form-control{
+    width: 500px;
+    margin: 0 6px;
+}
+
+.form-select{
+    width: 300px;
+}
