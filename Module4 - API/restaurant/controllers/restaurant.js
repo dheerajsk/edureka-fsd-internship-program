@@ -66,6 +66,11 @@ exports.deleteRestaurant = (req, res)=>{
 exports.filterRestaurant = (req, res)=>{
     const params = url.parse(req.url, true).query;
     console.log(params);
+    if(!params.name){
+        repo.getByLocation(params.location, (resutaurants)=>{
+            res.send(resutaurants);
+        })
+    }
     repo.filterRestaurant(params.location, params.name, (result)=>{
         res.send(result);
     });
