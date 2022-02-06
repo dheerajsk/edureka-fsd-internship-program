@@ -1,7 +1,12 @@
 import "./Restaurant.css";
 
 
-function RestaurantCard(){
+function RestaurantCard(props){
+
+    // access item properties passed into componenet
+    // and store in a constant.
+    const restaurant = props.item;
+
     return (
         <div className="card">
             <div className="row">
@@ -9,9 +14,9 @@ function RestaurantCard(){
                 <img className="rounded" src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg"></img>
                 </div>
                 <div className="col-md-9">
-                    <p>Name</p>
-                    <p>Location</p>
-                    <p>Website</p>
+                    <p>{restaurant.name}</p>
+                    <p>Location : {restaurant.location}</p>
+                    <p>{restaurant.website}</p>
                 </div>
             </div>
         </div>

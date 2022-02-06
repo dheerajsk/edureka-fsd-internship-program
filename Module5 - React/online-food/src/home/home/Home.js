@@ -15,7 +15,6 @@ var [restaurants, setRestaurants]= useState([]);
                 (result)=>{
                     result=result.filter(r=> r.name);
                     setRestaurants(result);
-                    console.log(result);
                 }
             );
     }, []);
@@ -26,7 +25,13 @@ var [restaurants, setRestaurants]= useState([]);
             <div className="row">
                 <div className="col-md-3 filter"></div>
                 <div className="col-md-9 result-container">
-                    <RestaurantCard />
+                    {/* This is possible because of JSX */}
+                    {
+                        restaurants.length>0 &&
+                        restaurants.map(r=>
+                            <RestaurantCard item={r} />
+                            )
+                    }
                 </div>
             </div>
         </div>
