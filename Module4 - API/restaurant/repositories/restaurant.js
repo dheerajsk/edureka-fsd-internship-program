@@ -51,7 +51,6 @@ exports.getByLocation = (location, callback)=>{
 }
 
 exports.search = (key, callback)=>{
-    console.log(regexKey);
     const collection = mongodb.getCollection("Restaurant");
     collection.find({name: {$regex:key}}).toArray().then(
         (restaurants)=>{
@@ -82,5 +81,19 @@ exports.deleteRestaurant = (id, callback)=>{
             ()=>{callback()},
             err=>{console.log(err)}
         )
-    
+}
+
+exports.filterRestaurant = (city, name, callback)=>{
+    const collection = mongodb.getCollection("Restaurant");
+    collection.find({$and: [
+        {name: {$regex:name}},
+        {location: city}
+        ]}).toArray().then(
+        (restaurants)=>{
+            callback(restaurants);
+        },
+        err=>{
+            console.log(err);
+        }
+    )
 }

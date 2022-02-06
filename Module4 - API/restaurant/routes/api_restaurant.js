@@ -8,6 +8,7 @@ const router = express.Router();
 
 // Step 3: Configure route paths
 
+router.get("/Filter", controller.filterRestaurant);
 router.post("/", controller.addRestaurant);
 router.get("/", controller.getAllRestaurants);
 router.get("/location/:loc", controller.getRestaurantsByLocation);
