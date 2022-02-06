@@ -1,6 +1,8 @@
 // 1. Import express.
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+
 // Import routes
 const restaurantRoutes = require("./restaurant/routes/api_restaurant");
 const mongodb = require("./config/mongodb");
@@ -9,9 +11,9 @@ mongodb.connect();
 
 // 2. Creating a server
 const server = express();
-
+server.use(cors());
 // 3. Assigning port to server
-server.listen("3200");
+server.listen("3100");
 
 // 5. Handle api requests
 // Parsing request body for all requests
