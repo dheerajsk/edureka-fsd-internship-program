@@ -1,7 +1,7 @@
 
 import "./Header.css";
 
-function Header({change}){
+function Header({change, nameInput}){
     return(
         <div className="header">
             <div className="d-flex header-form">
@@ -12,7 +12,7 @@ function Header({change}){
                 <option value="Amritsar">Amritsar</option>
                 <option value="Pune">Pune</option>
             </select>
-            <input type="text" placeholder="Enter name...." className="form-control" id="inputName"></input>
+            <input onInput={(event)=>nameInput(event)} type="text" placeholder="Enter name...." className="form-control" id="inputName"></input>
             </div>
         </div>
     );
