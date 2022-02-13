@@ -23,21 +23,21 @@ var [location, setLocation]=useState([]);
     function filterRestaurant(event){
         location = event.target.value;
         setLocation(location);
-        fetch("http://localhost:3100/api/Restaurant/Filter?location="+location)
-        .then(res=> res.json())
-        .then(
-            (result)=>{
-                result=result.filter(r=> r.name);
-                setRestaurants(result);
-            }
-        );
+        filter(location);
     }
 
     function filterRestaurantWithName(event){
         const name = event.target.value;
-        console.log(name);
-        console.log(location);
-        fetch("http://localhost:3100/api/Restaurant/Filter?name="+name+"&location="+location)
+        filter(location, name);
+    }
+
+    function filter(location, name){
+        var url = "http://localhost:3100/api/Restaurant/Filter?location="+location;
+
+        if(name){
+            url = "http://localhost:3100/api/Restaurant/Filter?name="+name+"&location="+location;
+        }
+        fetch(url)
         .then(res=> res.json())
         .then(
             (result)=>{
