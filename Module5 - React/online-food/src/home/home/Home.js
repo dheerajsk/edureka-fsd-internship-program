@@ -19,9 +19,21 @@ var [restaurants, setRestaurants]= useState([]);
             );
     }, []);
 
+    function filterRestaurant(event){
+        const location = event.target.value;
+        fetch("http://localhost:3100/api/Restaurant/Filter?location="+location)
+        .then(res=> res.json())
+        .then(
+            (result)=>{
+                result=result.filter(r=> r.name);
+                setRestaurants(result);
+            }
+        );
+    }
+
     return(
         <div>
-            <Header />
+            <Header change={(event)=>filterRestaurant(event)} />
             <div className="row">
                 <div className="col-md-3 filter"></div>
                 <div className="col-md-9 result-container">
