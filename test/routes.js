@@ -4,6 +4,23 @@ const foodModel = require("./models/food");
 const app = express();
 const path = require('path')
 const fs = require("fs");
+const session=require("express-session");
+
+
+app.post("/login", (req, res)=>{
+  req.session.authenticated = true;
+  req.session.user = {id: 1, name: "x"};
+  res.send("ok");
+})
+
+app.post("/hello", (req, res)=>{
+  console.log(req.session.cookie.ex)
+  console.log(req.session.user);
+  console.log(req.session.authenticated);
+  res.send("ok");
+  
+})
+
 
 app.get("/foods", async (request, response) => {
   var foods = await foodModel.find({}).populate('vID').lean();
@@ -22,6 +39,7 @@ app.get("/foods", async (request, response) => {
     response.status(500).send(error);
   }
 });
+
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
       cb(null, 'uploads')
@@ -33,7 +51,9 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
-app.post('/food', upload.single('image'), (req, res, next) => {
+app.post('/food', upload.single('image'));
+
+app.post('/food', (req, res, next) => {
   console.log(__dirname + '/uploads/' + req.file.filename);
   var obj = {
       name: req.body.name,
