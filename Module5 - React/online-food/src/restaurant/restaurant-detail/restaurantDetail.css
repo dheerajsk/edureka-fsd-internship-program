@@ -1,0 +1,29 @@
+
+
+.banner{
+    height: 300px;
+    background-size: cover;
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/12/22/83/0d/kushmi-foods-30-years.jpg");
+}
+
+.name{
+margin-top: 4%;
+font-family: 'Courier New', Courier, monospace;
+    left: 116px;
+width: 303px;
+height: 43px;
+text-align: left;
+font: normal normal 800 30px/46px;
+font-weight: bolder;
+letter-spacing: 0px;
+color: #192F60;
+opacity: 1;
+}
+
+.tab-name{
+left: 137px;
+width: 85px;
+text-align: left;
+color: #192F60;
+opacity: 1;
+}

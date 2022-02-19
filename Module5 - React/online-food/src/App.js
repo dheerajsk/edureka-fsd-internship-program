@@ -1,25 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import {Routes, Route} from "react-router-dom";
+import Home from "./home/home/Home";
+import RestaurantDetail from './restaurant/restaurant-detail/restaurantDetail';
 
 // JSX - JavaScript Extentsion (Another react feature)
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to React App.
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+      <Route path="" element={<Home />}></Route>
+      <Route path="restaurant/:id" element={<RestaurantDetail />}></Route>
+      </Routes>
     </div>
   );
 }

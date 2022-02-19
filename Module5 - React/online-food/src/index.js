@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Home from './home/home/Home';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 // It renders into dom
 ReactDOM.render(
-    <Home />,
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>,
   document.getElementById('root')
 );
 

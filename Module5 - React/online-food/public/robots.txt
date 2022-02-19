@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+1. Make Div clickable.
+2. Create detail component.
+    - Detail of restaurant.
+    - Menus of restaurant.
+3. Redirect on click to detail component.

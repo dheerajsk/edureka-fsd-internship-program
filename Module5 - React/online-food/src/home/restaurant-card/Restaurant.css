@@ -12,3 +12,8 @@ img{
     height: 100%;
     width: 130px;
 }
+
+a{
+    text-decoration: none;
+    color: darkgreen;
+}

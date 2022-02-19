@@ -1,13 +1,20 @@
 import "./Restaurant.css";
 
+import { useNavigate } from "react-router-dom";
 
 function RestaurantCard(props){
 
     // access item properties passed into componenet
     // and store in a constant.
     const restaurant = props.item;
+    const navigate = useNavigate();
 
+    const redirectToDetail=(event)=>{
+        navigate("restaurant/"+event)
+    }
+    // restaurant/id
     return (
+        <a href="" onClick={()=>redirectToDetail(restaurant._id)}>
         <div className="card">
             <div className="row">
                 <div className="col-md-3">
@@ -20,6 +27,7 @@ function RestaurantCard(props){
                 </div>
             </div>
         </div>
+        </a>
     )
 }
 
