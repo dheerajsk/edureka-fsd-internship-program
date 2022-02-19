@@ -1,9 +1,21 @@
 import "./restaurantDetail.css";
 
+import {useParams} from "react-router-dom";
+import { useEffect } from "react";
 
 function RestaurantDetail(){
+
+    const {id} = useParams();
+
+
+    useEffect(()=>{
+
+    }, [])
+
     return (
+        
         <div className="container">
+            
             <div className="banner"></div>
 
             <h3 className="name">Name</h3>
