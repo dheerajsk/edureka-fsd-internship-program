@@ -2,11 +2,16 @@ import "./restaurantDetail.css";
 
 import {useParams} from "react-router-dom";
 import { useEffect, useState } from "react";
+import MenuModal from "../menu-modal/menu-modal";
 
 function RestaurantDetail(){
 
     var [restaurant, setRestaurant] = useState();
     const {id} = useParams();
+    var [show, setShow]=useState(false);
+    // this.setState({
+    //   show: false
+    // });
 
 
     useEffect(()=>{
@@ -22,11 +27,11 @@ function RestaurantDetail(){
     return (
         
         <div className="container">
-            
             <div className="banner"></div>
-
             <h3 className="name">{restaurant ? restaurant.name : ''}</h3>
-            <button className="btn btn-danger float-end">Place Online Order</button>
+            <button className="btn btn-danger float-end" onClick={()=>{setShow(true)}}>Place Online Order</button>
+
+      <MenuModal show={show} />
 
  <ul className="nav nav-tabs">
   <li className="nav-item">
