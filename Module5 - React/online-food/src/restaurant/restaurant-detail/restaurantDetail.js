@@ -1,16 +1,23 @@
 import "./restaurantDetail.css";
 
 import {useParams} from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function RestaurantDetail(){
 
+    var [restaurant, setRestaurant] = useState();
     const {id} = useParams();
 
 
     useEffect(()=>{
-
-    }, [])
+      fetch("http://localhost:3100/api/Restaurant/"+id)
+          .then(res=> res.json())
+          .then(
+              (result)=>{
+                setRestaurant(result);
+              }
+          );
+  }, []);
 
     return (
         
@@ -18,7 +25,7 @@ function RestaurantDetail(){
             
             <div className="banner"></div>
 
-            <h3 className="name">Name</h3>
+            <h3 className="name">{restaurant ? restaurant.name : ''}</h3>
             <button className="btn btn-danger float-end">Place Online Order</button>
 
  <ul className="nav nav-tabs">
@@ -33,12 +40,12 @@ function RestaurantDetail(){
 <div className="tab-content">
     <div role="tabpanel" className="tab-pane active" id="overview">
 
-        Address
+    <p>Location/Address: {restaurant ? restaurant.location : ''}</p>
 
     </div>
     <div role="tabpanel" className="tab-pane" id="contact">
-        Website
-        Phone
+    <p>Website: {restaurant ? restaurant.website : ''}</p>
+    <p>Contact: {restaurant ? restaurant.contact : ''}</p>
     </div>
   </div>
         </div>

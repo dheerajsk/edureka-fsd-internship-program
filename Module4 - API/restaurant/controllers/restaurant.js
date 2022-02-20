@@ -28,6 +28,7 @@ exports.updateRestaurant = (req, res)=>{
 }
 
 exports.getAllRestaurants = (req, res)=>{
+    console.log("okk");
     repo.getAll((restaurants)=>{
         res.send(restaurants);
     })

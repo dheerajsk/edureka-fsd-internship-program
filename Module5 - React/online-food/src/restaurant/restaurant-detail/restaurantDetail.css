@@ -27,3 +27,9 @@ text-align: left;
 color: #192F60;
 opacity: 1;
 }
+
+p{
+    margin: 4%;
+    color: #192F60;
+    font-size: large;
+}
