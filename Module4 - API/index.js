@@ -5,6 +5,7 @@ const cors = require("cors");
 
 // Import routes
 const restaurantRoutes = require("./restaurant/routes/api_restaurant");
+const menuRoutes = require("./restaurant/routes/api_menu");
 const mongodb = require("./config/mongodb");
 
 mongodb.connect();
@@ -20,6 +21,7 @@ server.listen("3100");
 server.use(bodyParser.json());
 // server.use method takes all request methods
 server.use("/api/restaurant", restaurantRoutes);
+server.use("/api/menu", menuRoutes);
 
 // 4. Handle default request from client
 server.get("/", (req, res)=>{
