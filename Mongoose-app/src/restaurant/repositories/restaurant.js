@@ -18,6 +18,10 @@ exports.getAll = async()=>{
                    from: "menus",
                    localField: "_id",
                    foreignField : "restaurantID",
+                   pipeline:[
+                    { $match: {isVeg: false}},
+                    { $project : {restaurantID: 0}}
+                   ],
                    as : "_menus"
                }
            }
