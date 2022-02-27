@@ -9,3 +9,9 @@
 
 POSTMAN - Tool to test apis.
 React
+
+
+Steps to MongoDB lookup
+1. Install Mongoose.
+2. Create Mongoose Schema for restaurant and menu.
+3. Lookup restaurant and its menus.

@@ -5,7 +5,7 @@ function MenuModal(props){
     return (
         // <Modal show={show} onHide={handleClose}>
         <Modal show={props.show}>
-        <Modal.Header closeButton>
+        <Modal.Header closeButton="true">
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
