@@ -9,3 +9,19 @@ exports.add = async (restaurant)=>{
         console.log(err);
     }
 }
+
+exports.getAll = async()=>{
+    const result = await Restaurant.aggregate(
+        [
+           {
+               $lookup:{
+                   from: "menus",
+                   localField: "_id",
+                   foreignField : "restaurantID",
+                   as : "_menus"
+               }
+           }
+        ]
+    );
+    return result;
+}

@@ -7,3 +7,8 @@ exports.add = async (req, res)=>{
     const result = await repo.add(newRestaurant);
     res.status(200).send(result);
 }
+
+exports.getAll = async (req, res)=>{
+    const result = await repo.getAll();
+    res.status(200).send(result);
+}
