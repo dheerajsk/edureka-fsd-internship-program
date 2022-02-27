@@ -10,7 +10,7 @@ const server = express();
 mongooseConfig.connect();
 
 server.listen(3300);
-server.use(bodyParser.json());
+server.use(express.json());
 
 server.use("/api/restaurant", restaurantRoutes);
 server.use("/api/menu", menuRoutes);

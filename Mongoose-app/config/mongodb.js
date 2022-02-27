@@ -1,7 +1,7 @@
 
 const mongoose = require("mongoose");
 
-const url = "mongodb+srv://test:test@cluster0.fapqz.mongodb.net/restaurantMongooseDB?retryWrites=true&w=majority"
+const url = "mongodb+srv://test:test@cluster0.cbdyt.mongodb.net/restaurantMongooseDB?retryWrites=true&w=majority"
 
 
 
