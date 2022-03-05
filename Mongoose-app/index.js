@@ -3,7 +3,7 @@ const mongooseConfig = require("./config/mongodb");
 const menuRoutes = require("./src/restaurant/routes/menu");
 const restaurantRoutes = require("./src/restaurant/routes/restaurant");
 const bodyParser = require("body-parser");
-
+const userRoutes = require("./src/restaurant/routes/user");
 
 const server = express();
 
@@ -14,6 +14,7 @@ server.use(express.json());
 
 server.use("/api/restaurant", restaurantRoutes);
 server.use("/api/menu", menuRoutes);
+server.use("/api/user", userRoutes);
 
 
 server.get("/",(req, res)=>{

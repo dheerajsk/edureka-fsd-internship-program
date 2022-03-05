@@ -4,14 +4,13 @@ const repo = require("../repositories/restaurant");
 const url = require("url");
 
 // Trying to add restaurant
-exports.addRestaurant = (req, res)=>{
+exports.addRestaurant = async (req, res)=>{
     console.log(req.body);
     const newRestaurant = 
     new Restaurant(null, req.body.name, 
         req.body.location, req.body.website, req.body.contact);
-    repo.add(newRestaurant, ()=>{
+        await repo.add(newRestaurant);
         res.send("Data added");
-    })
 }
 
 exports.updateRestaurant = (req, res)=>{

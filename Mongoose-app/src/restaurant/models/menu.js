@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 const menuSchema = new mongoose.Schema(
     {
-        name: String,
+        name: {type: String},
         price: Number,
         type: String,
         detail: String,
@@ -16,7 +16,7 @@ const menuSchema = new mongoose.Schema(
     }
 );
 
-// menus
+// menus (This is mongoose standard).
 const menu = mongoose.model("Menu", menuSchema);
 
 module.exports = menu;

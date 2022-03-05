@@ -1,0 +1,22 @@
+Nodejs - API (REST)
+React - Front End.
+
+Connectionless/SessionLess Architecture.
+    - Simple To Implement.
+    - Faster.
+    - Standard across all clients.
+
+1. Client log in (username, password)
+2. Server Authenticates and provide a token to client.
+3. Client uses auth token to access secure api.
+4. Server checks token is valid, extracts user information from token.
+    if invalid/expired-> returns 401(Unauthorized)
+    if valid, it allows access.
+
+
+SessionFull Architecture - MVC.
+Ongoing session unless user logs out.
+    - Simple Authentication.
+    - Secure.
+
+    Problems - Slower, doesnt support all clients.

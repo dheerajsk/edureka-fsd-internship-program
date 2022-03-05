@@ -1,0 +1,24 @@
+Mongoose.
+
+- Library to work with mongodb.
+- ORM (Object Relational Mapper).
+
+1. Install Mongoose.
+2. Create config and connecto to mongoose.
+3. Schema.
+    - Model which represents structure of data or document.
+    - using mongoose.Schema
+    - using mongoose.Model to define collection name
+
+
+
+pagnation. (From Server, PageNo)
+To Skip - (pageNo-1)*2
+    Page 1:
+        skip = (pageNo-1)*2 = (1-1)*2 = 0*2 = 0;
+    Page 2:
+        skip = (2-1)*2 = 1*2 = 2
+    Page 3:
+        skip = (3-1)*2 = 2*2 = 4
+To Limit.
+    $limit = 2;
